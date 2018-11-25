@@ -29,20 +29,18 @@ class LoginForm extends Component {
                 </View>
             );
         }
-
-        return (
-            <Button
-                onPress={this.onButtonPress.bind(this)}
-            >
-                Login
-            </Button>
-        );
     }
     
     renderButton() {
         if (this.props.loading) {
             return <Spinner size="large" />;
         }
+
+        return (
+            <Button onPress={this.onButtonPress.bind(this)}>
+                Login
+            </Button>
+        );
     }
 
     render() {
